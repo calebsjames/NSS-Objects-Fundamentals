@@ -57,13 +57,15 @@ const tenAlbum = {
 
 // Dot vs. Bracket Notation - accessing properties
 // TODO: USING DOT NOTATION, access the object properties (artist, title, released) and log the following message to the console using string interpolation: "Pearl Jam's Album Ten was released on 8/27/1991"
-
+console.log(`${tenAlbum.artist}'s album ${tenAlbum.title} was released on ${tenAlbum.released}`)
 // TODO: Output the same messge to the console using BRACKET NOTATION
-
+console.log(`${tenAlbum['artist']}'s album ${tenAlbum['title']} was released on ${tenAlbum['released']}`)
 // Iterating Object keys/values
 // TODO: Iterate the tenAlbum object and log the key/value pairs to the console using a for/in loop
 // example: "title": "Ten"
-
+for (thing in tenAlbum) {
+    console.log(tenAlbum[thing])
+}
 // Accessing iterable properties on objects
 // TODO: Iterate the tracks array and output the title of each song and its song length using a for loop of your choosing. The output should look something like this:
 /*
@@ -72,6 +74,12 @@ const tenAlbum = {
     etc.
 */
 
+console.log(tenAlbum.tracks)
+
+
+for (let song of tenAlbum.tracks) {
+    console.log(`Title: ${song.title} - length: ${song.length}`)
+}
 // ! ADD AND COMMIT
 
 // OBJECT.keys() / .values() / .entries()
@@ -89,7 +97,19 @@ const tenAlbum = {
 // ! ADD AND COMMIT
 
 // USING THE DATA FROM .setlists
-import { setlistsFromAPI } from "./setlists.js";
+
+
+
+
+
+// import { setlistsFromAPI } from "./setlists.js";
+
+
+
+
+
+
+
 // TODO: Log 'setlistsFromAPI' to the console
 
 // TODO: USING the 'setlistsFromAPI' data, find the event dated 18-08-2018 and store that event object in a variable named 'event'
